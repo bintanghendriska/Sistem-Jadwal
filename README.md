@@ -3,33 +3,33 @@
 > Tugas Praktikum **Pemrograman Mobile** · Handling Lists & Data Rendering
 > React Native (Expo) dengan tema visual terinspirasi dunia ninja — dilihat lewat **Expo Go**.
 
-| | |
-|---|---|
-| Nama | Bintang |
-| NIM | 233510676 |
-| Kelas | _(isi kelas)_ |
+|       |                                             |
+| ----- | ------------------------------------------- |
+| Nama  | Bintang                                     |
+| NIM   | 233510676                                   |
+| Kelas | 6C                                          |
 | Prodi | Teknik Informatika — Universitas Islam Riau |
 
 ---
 
 ## 📋 Deskripsi
 
-Aplikasi **Sistem Jadwal Kuliah** berisi tiga halaman yang masing-masing mendemonstrasikan teknik rendering list berbeda di React Native — `.map()`, `FlatList`, dan `SectionList` — dalam satu proyek. Seluruh data bersumber dari **array statis (hardcode)** di `src/data/jadwalData.js`.
+Aplikasi **Sistem Jadwal Kuliah** berisi tiga halaman yang masing-masing mendemonstrasikan teknik rendering list berbeda di React Native — `.map()`, `FlatList`, dan `SectionList` — dalam satu proyek. Ditulis penuh dengan **TypeScript**. Seluruh data bersumber dari **array statis (hardcode)** di `src/data/jadwalData.ts`.
 
 ## ✅ Pemenuhan Syarat Tugas
 
-| Syarat | Implementasi | Lokasi |
-|---|---|---|
-| Halaman ringkasan matkul dengan `.map()` | `mataKuliah.map()` di `ScrollView`, menampilkan nama, kode, SKS, dosen | `src/app/(tabs)/index.jsx` |
-| Key unik pada `.map()` | `key={mk.id}` dari data statis | `src/app/(tabs)/index.jsx` |
-| `FlatList` minimal 10 item | 15 pertemuan (matkul, pertemuan ke-, topik, tanggal) | `src/app/(tabs)/pertemuan.jsx` |
-| `keyExtractor` | `(item) => item.id` | `src/app/(tabs)/pertemuan.jsx` |
-| `ItemSeparatorComponent` | Garis tipis + shuriken kecil di tengah | `src/app/(tabs)/pertemuan.jsx` |
-| `ListHeaderComponent` | Banner gradient "Papan Misi" + total pertemuan | `src/app/(tabs)/pertemuan.jsx` |
-| `ListEmptyComponent` | Shuriken berputar + teks "Belum ada gulungan misi" | `src/app/(tabs)/pertemuan.jsx` |
-| `SectionList` dikelompokkan per hari | Sections Senin/Selasa/Rabu (matkul, ruangan, jam) | `src/app/(tabs)/jadwal.jsx` |
-| Header seksi bergaya beda dari item | Header "ikat kepala ninja" + kanji hari vs kartu gulungan krem, **sticky** | `src/components/HeadbandHeader.jsx` |
-| Data dari array statis | 3 array hardcode: `mataKuliah`, `pertemuan`, `jadwalMingguan` | `src/data/jadwalData.js` |
+| Syarat                                   | Implementasi                                                               | Lokasi                              |
+| ---------------------------------------- | -------------------------------------------------------------------------- | ----------------------------------- |
+| Halaman ringkasan matkul dengan `.map()` | `mataKuliah.map()` di `ScrollView`, menampilkan nama, kode, SKS, dosen     | `src/app/(tabs)/index.tsx`          |
+| Key unik pada `.map()`                   | `key={mk.id}` dari data statis                                             | `src/app/(tabs)/index.tsx`          |
+| `FlatList` minimal 10 item               | 15 pertemuan (matkul, pertemuan ke-, topik, tanggal)                       | `src/app/(tabs)/pertemuan.tsx`      |
+| `keyExtractor`                           | `(item) => item.id`                                                        | `src/app/(tabs)/pertemuan.tsx`      |
+| `ItemSeparatorComponent`                 | Garis tipis + shuriken kecil di tengah                                     | `src/app/(tabs)/pertemuan.tsx`      |
+| `ListHeaderComponent`                    | Banner gradient "Papan Misi" + total pertemuan                             | `src/app/(tabs)/pertemuan.tsx`      |
+| `ListEmptyComponent`                     | Shuriken berputar + teks "Belum ada gulungan misi"                         | `src/app/(tabs)/pertemuan.tsx`      |
+| `SectionList` dikelompokkan per hari     | Sections Senin/Selasa/Rabu (matkul, ruangan, jam)                          | `src/app/(tabs)/jadwal.tsx`         |
+| Header seksi bergaya beda dari item      | Header "ikat kepala ninja" + kanji hari vs kartu gulungan krem, **sticky** | `src/components/HeadbandHeader.tsx` |
+| Data dari array statis                   | 3 array hardcode: `mataKuliah`, `pertemuan`, `jadwalMingguan`              | `src/data/jadwalData.ts`            |
 
 ## ✨ Tema & Efek Visual "Shinobi UI"
 
@@ -104,8 +104,8 @@ Halaman Pertemuan akan menampilkan shuriken berputar + pesan kosong. Screenshot 
 
 ## 📸 Screenshot
 
-| Halaman A — `.map()` | Halaman B — FlatList | Halaman C — SectionList | Empty State |
-|---|---|---|---|
+| Halaman A — `.map()`                         | Halaman B — FlatList                         | Halaman C — SectionList                   | Empty State                                |
+| -------------------------------------------- | -------------------------------------------- | ----------------------------------------- | ------------------------------------------ |
 | ![Ringkasan](docs/screenshots/halaman-a.png) | ![Pertemuan](docs/screenshots/halaman-b.png) | ![Jadwal](docs/screenshots/halaman-c.png) | ![Empty](docs/screenshots/empty-state.png) |
 
 > Simpan screenshot dari Expo Go ke `docs/screenshots/` dengan nama file di atas.
