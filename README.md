@@ -6,7 +6,7 @@
 |       |                                             |
 | ----- | ------------------------------------------- |
 | Nama  | Bintang                                     |
-| NIM   | 233510676                                   |
+| NPM   | 233510676                                   |
 | Kelas | 6C                                          |
 | Prodi | Teknik Informatika — Universitas Islam Riau |
 
